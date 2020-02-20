@@ -1,0 +1,14 @@
+*~
+._*
+.bak
+.cvs
+.DS_Store
+.Spotlight-V100
+.swp
+.svn
+.Trashes
+Desktop.ini
+Thumbs.db
+
+# ignore node_modules
+node_modules/

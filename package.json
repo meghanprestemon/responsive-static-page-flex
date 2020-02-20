@@ -1,0 +1,31 @@
+{
+  "name": "candidate-assignment-fedev",
+  "version": "1.0.0",
+  "description": "Terakeet Front-end Candidate Assignment",
+  "author": "Terakeet",
+  "scripts": {
+    "build-css": "node-sass --source-map-embed=true css/app.scss | postcss > css/app.min.css",
+    "watch-css": "sane 'npm run build-css' --glob 'css/**/*.scss'",
+    "build-js": "babel js/app.js | uglifyjs --output js/app.min.js",
+    "watch-js": "sane 'npm run build-js' --glob 'js/app.js'",
+    "browser-sync": "browser-sync start --server --files '**/*.html, css/*.min.css, js/*.min.js' --no-ghost-mode --open ui",
+    "dev": "concurrently --names 'css,js,sync' --prefix-colors 'magenta,yellow,blue' 'npm:watch-css' 'npm:watch-js' 'npm:browser-sync'"
+  },
+  "devDependencies": {
+    "autoprefixer": "^9.7.3",
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "browser-sync": "^2.26.7",
+    "concurrently": "^5.0.2",
+    "csswring": "^7.0.0",
+    "node-notifier-cli": "^1.1.2",
+    "node-sass": "^4.13.0",
+    "postcss": "^7.0.26",
+    "postcss-cli": "^7.0.0",
+    "postcss-momentum-scrolling": "^2.2.9",
+    "postcss-normalize": "^8.0.1",
+    "sane": "^4.1.0",
+    "uglify-js": "^3.7.4"
+  },
+  "browserslist": "defaults"
+}
