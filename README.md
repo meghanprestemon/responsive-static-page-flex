@@ -1,6 +1,6 @@
 # Front-end Developer Candidate Assignment
 
-The main objective of this assignment is to utilize HTML, CSS, and JS, to build out a single, static, responsive page that includes some interactive elements.
+The main objective of this assignment is to utilize HTML, CSS, and JS to build out a single, static, responsive page that includes some interactive elements.
 
 ## Setup
 
