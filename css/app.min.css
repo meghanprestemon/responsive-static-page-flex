@@ -67,11 +67,21 @@ header .hamburger-menu {
 }
 
 header .hamburger-menu .hamburger-icon {
+  display: block;
   height: 100%;
+}
+
+header .hamburger-menu.active .hamburger-icon {
+  display: none;
 }
 
 header .hamburger-menu .close-menu-icon {
   display: none;
+}
+
+header .hamburger-menu.active .close-menu-icon {
+  display: block;
+  height: 100%;
 }
 
 header .nav-wrapper {
