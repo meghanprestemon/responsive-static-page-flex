@@ -20,6 +20,7 @@ h1 {
 
 h2 {
   font-size: 32px;
+  margin: 25px 0;
 }
 
 h3 {
@@ -40,17 +41,14 @@ a {
 /* Mobile Style */
 
 header {
+  display: flex;
+  justify-content: space-between;
   height: 65px;
-  margin-left: 60px;
-  margin-right: 60px;
-  margin-top: 40px;
-  margin-bottom: 40px;
+  margin: 60px 40px;
   overflow: hidden;
 }
 
 header .nav-logo {
-  display: inline-block;
-  float: left;
   height: 100%;
 }
 
@@ -59,15 +57,12 @@ header .nav-logo .logo {
 }
 
 header .hamburger-menu {
-  display: inline-block;
-  float: right;
   height: 100%;
   background-color: #ededed;
   border-radius: 10px;
 }
 
 header .hamburger-menu .hamburger-icon {
-  display: block;
   height: 100%;
 }
 
@@ -89,9 +84,9 @@ header .nav-wrapper {
 }
 
 .hero {
-  clear: left;
-  display: block;
-  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-image: url('../images/hero-bg.jpg');
   background-repeat: no-repeat;
   background-size: cover;
@@ -100,40 +95,31 @@ header .nav-wrapper {
 }
 
 .hero .hero-text {
-  position: absolute;
   text-align: center;
   color: #ffffff;
   max-width: 400px;
-  margin-top: 0px;
-  margin-bottom: 0px;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  margin: 0;
 }
 
 .content main {
-  margin-top: 10px;
-  margin-bottom: 10px;
-  margin-left: 25px;
-  margin-right: 25px;
+  margin: 10px 25px;
 }
 
-.content main .icon-block {
+.content main .icon-block-section .icon-block {
   background-color: #ededed;
   color: #333333;
   text-align: center;
   padding-bottom: 40px;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin: 20px 0;
 }
 
-.content main .icon-block > img {
+.content main .icon-block-section .icon-block > img {
   height: 250px;
   width: auto;
   margin-top: 25px;
 }
 
-.content main .icon-block .icon-block-text > p {
+.content main .icon-block-section .icon-block .icon-block-text > p {
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 4;
@@ -143,7 +129,7 @@ header .nav-wrapper {
   margin-bottom: 30px;
 }
 
-.content main .icon-block .icon-block-button > a {
+.content main .icon-block-section .icon-block .icon-block-button > a {
   background-color: #d3d3d3;
   border-radius: 10px;
   font-size: 16px;
@@ -161,27 +147,32 @@ footer {
 /* Desktop Style */
 
 @media screen and (min-width: 1024px) {
+  header {
+    margin: 60px;
+  }
+
   header .hamburger-menu {
     display: none;
   }
 
   header .nav-wrapper {
-    display: block;
-    float: right;
+    display: flex;
+    align-items: center;
     height: 100%;
   }
 
   header .nav-wrapper .main-menu {
+    display: flex;
+    justify-content: space-between;
+    width: 350px;
     margin: 0;
     padding: 0;
   }
 
   header .nav-wrapper .main-menu .menu-item {
-    display: inline-block;
+    display: block;
     font-size: 18px;
     font-weight: 500;
-    margin-top: 25px;
-    padding-left: 25px;
   }
 
   .hero {
@@ -192,75 +183,75 @@ footer {
   .hero .hero-text {
     font-size: 50px;
     width: 100%;
-    max-width: 1000px;
+    max-width: 1500px;
   }
 
   .content {
+    display: flex;
+    justify-content: space-between;
     padding: 0 60px;
   }
 
   .content main {
-    display: inline-block;
-    float: left;
-    width: 70%;
+    width: 74%;
     margin-left: 0;
   }
 
-  .content main .icon-block {
-    display: inline-block;
-    text-align: justify;
-    width: 23%;
-    margin-right: 10px;
+  .content main .icon-block-section {
+    display: flex;
+    justify-content: space-between;
   }
 
-  .content main .icon-block > img {
-    display: block;
+  .content main .icon-block {
+    width: 23%;
+  }
+
+  .content main .icon-block-section .icon-block > img {
     height: 100px;
     margin-left: auto;
     margin-right: auto;
   }
 
-  .content main .icon-block h3, .icon-block-text, .icon-block-button {
+  .content main .icon-block-section .icon-block h3, .icon-block-text, .icon-block-button {
     text-align: center;
     font-size: 14px;
   }
 
-  .content main .icon-block h3 {
+  .content main .icon-block-section .icon-block h3 {
     font-size: 18px;
   }
 
-  .content main .icon-block + p {
+  .content .sidebar {
     display: block;
-    clear: both;
+    width: 23%;
+    margin-top: 35px;
   }
 
-  .content .sidebar {
-    display: inline-block;
-    float: right;
-    width: 20%;
+  .content .sidebar > p {
     background-color: #ededed;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 20px;
-    padding-right: 20px;
-    margin-top: 25px;
+    margin: 0;
+    padding: 20px 20px 10px 20px;
+  }
+
+  .content .sidebar .sidebar-links {
+    background-color: #ededed;
+    margin: 0;
+    padding: 10px 20px 20px 20px;
   }
 
   .content .sidebar .sidebar-links > li {
+    display: flex;
+    justify-content: space-between;
     border-bottom: 1px solid #d3d3d3;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding: 10px 0;
   }
 
   .content .sidebar .sidebar-links > li::after {
     content: url('../images/icon-chevron_right.svg');
-    text-align: right;
-    float: right;
   }
 
   footer {
     display: block;
-    clear: both;
     text-align: center;
     background-color: #ededed;
     width: 100%;
@@ -273,6 +264,4 @@ footer {
     margin: 0;
     padding-top: 24px;
   }
-
-
 }
