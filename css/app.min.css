@@ -185,10 +185,12 @@ footer {
   }
 
   .hero {
-    height: 300px;
+    height: 275px;
+    background-position: 0 -500px;
   }
 
   .hero .hero-text {
+    font-size: 50px;
     width: 100%;
     max-width: 1000px;
   }
