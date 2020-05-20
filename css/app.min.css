@@ -49,6 +49,7 @@ header {
 }
 
 header .nav-logo {
+  background-color: #fff;
   height: 100%;
 }
 
@@ -148,7 +149,16 @@ footer {
 
 @media screen and (min-width: 1024px) {
   header {
-    margin: 60px;
+    height: 145px;
+    margin: 0;
+  }
+
+  header .nav-logo {
+    z-index: 2;
+    background-color: #fff;
+    height: 65px;
+    width: 65%;
+    padding: 40px 0px 40px 60px;
   }
 
   header .hamburger-menu {
@@ -156,16 +166,19 @@ footer {
   }
 
   header .nav-wrapper {
+    z-index: 2;
     display: flex;
     align-items: center;
+    background-color: #fff;
     height: 100%;
+    width: 35%;
   }
 
   header .nav-wrapper .main-menu {
     display: flex;
     justify-content: space-between;
     width: 350px;
-    margin: 0;
+    margin: 0 60px 0 0;
     padding: 0;
   }
 
@@ -221,6 +234,10 @@ footer {
     font-size: 18px;
   }
 
+  .content main .icon-block-section .icon-block.modal {
+    position: fixed;
+  }
+
   .content .sidebar {
     display: block;
     width: 23%;
@@ -248,6 +265,38 @@ footer {
 
   .content .sidebar .sidebar-links > li::after {
     content: url('../images/icon-chevron_right.svg');
+  }
+
+  #icon-block-modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    background-color: rgba(0,0,0,0.5);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+  }
+
+  #icon-block-modal .modal-block {
+    background-color: #fff;
+    text-align: center;
+    width: 400px;
+    margin: 20% auto;
+    padding: 20px;
+  }
+
+  #icon-block-modal .modal-block .close-button {
+    text-align: right;
+  }
+
+  #icon-block-modal .modal-block .close-button .close-button-img:hover {
+    cursor: pointer;
+  }
+
+  #icon-block-modal .modal-block .icon-block-button {
+    display: none;
   }
 
   footer {
