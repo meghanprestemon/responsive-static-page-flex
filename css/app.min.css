@@ -120,14 +120,18 @@ header .nav-wrapper {
   margin-top: 25px;
 }
 
-.content main .icon-block-section .icon-block .icon-block-text > p {
+.content main .icon-block-section .icon-block .icon-block-text > p:first-child {
   display: -webkit-box;
-  -webkit-box-orient: vertical;
   -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
   overflow: hidden;
   margin-left: 35px;
   margin-right: 35px;
   margin-bottom: 30px;
+}
+
+.content main .icon-block-section .icon-block .icon-block-text > p:nth-child(n+2) {
+  display: none;
 }
 
 .content main .icon-block-section .icon-block .icon-block-button > a {
@@ -280,9 +284,10 @@ footer {
   }
 
   #icon-block-modal .modal-block {
+    position: relative;;
     background-color: #fff;
     text-align: center;
-    width: 400px;
+    width: 600px;
     margin: 20% auto;
     padding: 20px;
   }
@@ -295,7 +300,19 @@ footer {
     cursor: pointer;
   }
 
-  #icon-block-modal .modal-block .icon-block-button {
+  #icon-block-modal .modal-block #modal-content .icon-block {
+    margin: 45px;
+  }
+
+  #icon-block-modal .modal-block #modal-content .icon-block > img {
+    height: 100px;
+  }
+
+  #icon-block-modal .modal-block #modal-content .icon-block .icon-block-text {
+    text-align: left;
+  }
+
+  #icon-block-modal .modal-block #modal-content .icon-block .icon-block-button {
     display: none;
   }
 
