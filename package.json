@@ -19,7 +19,7 @@
     "concurrently": "^5.0.2",
     "csswring": "^7.0.0",
     "node-notifier-cli": "^1.1.2",
-    "node-sass": "^4.13.0",
+    "node-sass": "^7.0.0",
     "postcss": "^7.0.26",
     "postcss-cli": "^7.0.0",
     "postcss-momentum-scrolling": "^2.2.9",
