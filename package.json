@@ -15,7 +15,7 @@
     "autoprefixer": "^9.7.3",
     "babel-cli": "^6.26.0",
     "babel-preset-env": "^1.7.0",
-    "browser-sync": "^2.26.7",
+    "browser-sync": "^2.27.10",
     "concurrently": "^5.0.2",
     "csswring": "^7.0.0",
     "node-notifier-cli": "^1.1.2",
